@@ -2,6 +2,14 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 
+/**
+ * Top fixed site navigation bar that displays branding, responsive navigation links, and authentication controls.
+ *
+ * The center links are shown on medium screens and larger; the "Courses" link is rendered only for authenticated users.
+ * A user menu button is always visible; sign-in and sign-up actions are shown only for signed-out users.
+ *
+ * @returns The navbar React element to render at the top of the page.
+ */
 export function Navbar() {
     return (
         <nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">

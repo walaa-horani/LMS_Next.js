@@ -45,6 +45,13 @@ const features = [
     }
 ];
 
+/**
+ * Render a responsive features section showcasing EduNova's benefits for tech talent.
+ *
+ * Displays a centered heading and a responsive grid of feature cards; each card contains an icon, title, and description and adapts from 1 to 3 columns across breakpoints.
+ *
+ * @returns A JSX element containing the features section with a responsive grid of feature cards.
+ */
 export function Features() {
     return (
         <section className="py-24 bg-background/50">

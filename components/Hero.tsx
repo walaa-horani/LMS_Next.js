@@ -1,6 +1,11 @@
 import { Button } from "./ui/button";
 import { ArrowRight, CheckCircle2, Users } from "lucide-react";
 
+/**
+ * Render the landing-page hero section with a promotional badge, headline, description, primary and secondary CTAs, enrollment and rating metrics, and a decorative code-snippet card.
+ *
+ * @returns A JSX element containing the fully styled hero section
+ */
 export function Hero() {
     return (
         <section className="relative pt-32 pb-20 overflow-hidden">

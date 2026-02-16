@@ -20,6 +20,16 @@ interface Course {
     lessonCount: number;
 }
 
+/**
+ * Render a responsive "Most Popular Tracks" section using featured course data.
+ *
+ * Fetches featured courses and renders a responsive grid of course cards with thumbnail,
+ * tier badge, rating, title, description, module count, and enrollment control. Missing
+ * or undefined course fields are handled with sensible defaults (placeholder image, default
+ * tier, zero module count).
+ *
+ * @returns A React element containing the featured tracks section with a responsive grid of course cards.
+ */
 export async function Courses() {
 
     const { data: courses } = await sanityFetch({ query: FEATURED_COURSES_QUERY });

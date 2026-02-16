@@ -1,5 +1,10 @@
 import { CheckCircle2, UserPlus, Zap } from "lucide-react";
 
+/**
+ * Renders a three-step "Start Your Journey" section with a decorative radial background, centered header, and three step tiles ("Create Account", "Choose Track", "Level Up").
+ *
+ * @returns The JSX element for the steps section.
+ */
 export function Steps() {
     return (
         <section className="py-24 bg-background/50 relative overflow-hidden">

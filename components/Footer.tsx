@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { Github, Twitter, Linkedin } from "lucide-react";
 
+/**
+ * Render the site footer for EduNova, including branding, navigational link groups, and social icons.
+ *
+ * The footer is a responsive, presentational component that displays a two-column branding/description area,
+ * two link sections ("Platform" and "Company"), and a bottom bar with copyright text and social links.
+ *
+ * @returns A JSX element containing the complete footer layout with responsive styling and hover interactions.
+ */
 export function Footer() {
     return (
         <footer className="border-t border-border bg-background/50 backdrop-blur-xl">
