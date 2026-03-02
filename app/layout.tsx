@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   description: "Your gateway to knowledge and success",
 };
 
+/**
+ * Provides the application's root HTML structure and global layout.
+ *
+ * @param children - Content rendered inside the document body.
+ * @returns The root HTML element containing the body with the global font variable and antialiasing classes.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

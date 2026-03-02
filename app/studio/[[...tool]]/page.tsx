@@ -14,6 +14,11 @@ export const dynamic = 'force-static'
 
 export { metadata, viewport } from 'next-sanity/studio'
 
+/**
+ * Renders the Sanity Studio UI at the studio route using the project's Sanity configuration.
+ *
+ * @returns A React element that mounts the configured Sanity Studio.
+ */
 export default function StudioPage() {
   return <NextStudio config={config} />
 }

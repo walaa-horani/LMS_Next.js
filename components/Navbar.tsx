@@ -12,6 +12,14 @@ import {
 } from "@clerk/nextjs";
 import { Menu, X } from "lucide-react";
 
+/**
+ * Top fixed site navigation bar that displays branding, responsive navigation links, and authentication controls.
+ *
+ * The center links are shown on medium screens and larger; the "Courses" link is rendered only for authenticated users.
+ * A user menu button is always visible; sign-in and sign-up actions are shown only for signed-out users.
+ *
+ * @returns The navbar React element to render at the top of the page.
+ */
 export function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 

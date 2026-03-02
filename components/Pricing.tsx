@@ -2,6 +2,14 @@
 import { PricingTable } from "@clerk/nextjs";
 
 
+/**
+ * Renders a responsive pricing section that displays three subscription plans with prices, features, and CTAs.
+ *
+ * Each plan card shows the plan name, description, price (with optional period), a feature list, and a full‑width CTA button.
+ * The card for the plan marked as popular includes a "Most Popular" badge and adjusted visual styling.
+ *
+ * @returns A JSX element containing the pricing section
+ */
 export function Pricing() {
     return (
         <section className="py-24 bg-background">
