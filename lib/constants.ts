@@ -61,6 +61,7 @@ export const TIER_FEATURES = [
     {
         tier: "Free",
         color: "emerald",
+        description: "Get started with foundational courses and community access",
         features: [
             "Access to foundational courses",
             "Community Discord access",
@@ -71,25 +72,25 @@ export const TIER_FEATURES = [
     {
         tier: "Pro",
         color: "violet",
+        description: "Perfect for growing educators and small academies looking to scale their impact",
         features: [
-            "Everything in Free",
-            "All Pro-tier courses",
-            "Advanced real-world projects",
+            "Everything in Basic",
+            "Advanced analytics",
             "Priority support",
-            "Course completion certificates",
+            "Unlimited course uploads",
+            "Access to Pro-tier courses",
         ],
     },
     {
         tier: "Ultra",
         color: "cyan",
+        description: "Perfect for large-scale operations looking to automate and dominate their niche",
         features: [
             "Everything in Pro",
-            "AI Learning Assistant",
-            "Exclusive Ultra-only content",
-            "Monthly 1-on-1 sessions",
-            "Private Discord channel",
-            "Early access to new courses",
-            "Lifetime updates",
+            "Dedicated account management",
+            "SAML/SSO integration",
+            "Advanced data exports",
+            "Access to Ultra-tier courses",
         ],
     },
 ] as const;

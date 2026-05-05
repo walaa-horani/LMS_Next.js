@@ -1,8 +1,32 @@
 import { writeClient } from "@/sanity/lib/write-client";
 import { NextResponse } from "next/server";
+import { auth } from "@clerk/nextjs/server";
+import { client } from "@/sanity/lib/client";
+import { defineQuery } from "next-sanity";
+
+const FREE_PLAN_COURSE_LIMIT = 5;
+
+const COURSE_COUNT_QUERY = defineQuery(`count(*[_type == "course"])`);
 
 export async function POST(req: Request) {
     try {
+        const { has } = await auth();
+
+        const isPro = has({ plan: "pro" }) || has({ plan: "ultra" });
+
+        if (!isPro) {
+            const courseCount = await client.fetch(COURSE_COUNT_QUERY);
+            if (courseCount >= FREE_PLAN_COURSE_LIMIT) {
+                return NextResponse.json(
+                    {
+                        error: `Free plan is limited to ${FREE_PLAN_COURSE_LIMIT} courses. Upgrade to Pro for unlimited uploads.`,
+                        limitReached: true,
+                    },
+                    { status: 403 }
+                );
+            }
+        }
+
         const formData = await req.formData();
         const title = formData.get("title") as string;
         const description = formData.get("description") as string;

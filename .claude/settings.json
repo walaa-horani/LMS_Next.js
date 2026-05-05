@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs wc *)",
+      "Bash(grep -E \"\\\\.\\(ts|js|json\\)$\")",
+      "Bash(node -e \"require\\('svix'\\); console.log\\('svix ok'\\)\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Walaa\\.claude\\projects\\c--Users-Walaa-OneDrive-Desktop-LMS-Next-js"
+    ]
+  }
+}

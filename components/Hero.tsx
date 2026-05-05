@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
 import { ArrowRight, CheckCircle2, Users } from "lucide-react";
 
@@ -29,12 +30,16 @@ export function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button size="lg" className="h-12 px-8 text-lg">
-                                Start Learning Now <ArrowRight className="ml-2 w-5 h-5" />
-                            </Button>
-                            <Button size="lg" variant="outline" className="h-12 px-8 text-lg">
-                                View All Courses
-                            </Button>
+                            <Link href="/sign-up">
+                                <Button size="lg" className="h-12 px-8 text-lg">
+                                    Start Learning Now <ArrowRight className="ml-2 w-5 h-5" />
+                                </Button>
+                            </Link>
+                            <Link href="/courses">
+                                <Button size="lg" variant="outline" className="h-12 px-8 text-lg">
+                                    View All Courses
+                                </Button>
+                            </Link>
                         </div>
 
                         <div className="pt-8 border-t border-border flex items-center gap-8">

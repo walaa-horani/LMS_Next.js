@@ -4,7 +4,7 @@ import { PricingTable } from "@clerk/nextjs";
 
 export function Pricing() {
     return (
-        <section className="py-24 bg-background">
+        <section id="pricing" className="py-24 bg-background">
             <div className="container mx-auto px-6">
                 <h2 className="text-3xl lg:text-5xl font-bold text-center mb-4">
                     Transparent <span className="text-[#0d33f2]">Pricing</span>

@@ -188,6 +188,21 @@ export const COURSE_WITH_MODULES_QUERY = defineQuery(`*[
 
 
 
+export const GET_USER_BY_CLERK_ID_QUERY = defineQuery(`*[
+  _type == "user"
+  && clerkId == $clerkId
+][0] {
+  _id,
+  clerkId,
+  email,
+  name,
+  imageUrl,
+  plan,
+  subscriptionStatus,
+  subscriptionId,
+  planUpdatedAt
+}`);
+
 export const LESSON_BY_SLUG_QUERY = defineQuery(`*[
   _type == "lesson"
   && slug.current == $slug

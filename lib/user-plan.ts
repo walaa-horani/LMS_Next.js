@@ -13,7 +13,7 @@ export async function hasAccessToTier(
     console.log("requiredTier", requiredTier);
     console.log("has ultra", has({ plan: "ultra" }));
     console.log("has pro", has({ plan: "pro" }));
-    console.log("has free", has({ plan: "free" }));
+    console.log("has free_user", has({ plan: "free_user" }));
 
     // Ultra content requires ultra plan
     if (requiredTier === "ultra") {

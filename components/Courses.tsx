@@ -2,6 +2,7 @@ import { ArrowRight, Star } from "lucide-react";
 import { Button } from "./ui/button";
 import { FEATURED_COURSES_QUERY } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/live";
+import Link from "next/link";
 
 interface Course {
     _id: string;
@@ -30,14 +31,20 @@ export async function Courses() {
                     <h2 className="text-3xl lg:text-5xl font-bold">
                         Most Popular <span className="text-primary">Tracks</span>
                     </h2>
-                    <Button variant="ghost" className="hidden md:flex text-primary hover:text-primary/80">
-                        View All Tracks <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
+                    <Link href="/courses">
+                        <Button variant="ghost" className="hidden md:flex text-primary hover:text-primary/80">
+                            View All Tracks <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {courses?.map((track: Course, index: number) => (
-                        <div key={track._id || index} className="group relative rounded-2xl border border-border overflow-hidden bg-card/30 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300">
+                        <Link
+                            key={track._id || index}
+                            href={`/course/${track.slug?.current}`}
+                            className="group relative rounded-2xl border border-border overflow-hidden bg-card/30 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 block"
+                        >
                             <div className="h-48 overflow-hidden">
                                 <img
                                     src={track.thumbnail?.asset?.url || '/placeholder-course.jpg'}
@@ -65,19 +72,21 @@ export async function Courses() {
 
                                 <div className="flex items-center justify-between pt-4 border-t border-border/50">
                                     <span className="text-sm text-muted-foreground">{track.moduleCount || 0} modules</span>
-                                    <Button variant="link" className="p-0 h-auto text-primary">
-                                        Enroll Now
-                                    </Button>
+                                    <span className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+                                        Enroll Now →
+                                    </span>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
                 <div className="mt-8 text-center md:hidden">
-                    <Button variant="outline" className="w-full">
-                        View All Tracks
-                    </Button>
+                    <Link href="/courses">
+                        <Button variant="outline" className="w-full">
+                            View All Tracks
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </section>

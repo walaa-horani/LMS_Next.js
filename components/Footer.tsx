@@ -21,20 +21,20 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold mb-4">Platform</h4>
                         <ul className="space-y-2">
-                            <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Courses</Link></li>
-                            <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Mentorship</Link></li>
-                            <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link></li>
-                            <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">For Enterprise</Link></li>
+                            <li><Link href="/courses" className="text-muted-foreground hover:text-primary transition-colors">Courses</Link></li>
+                            <li><Link href="/support" className="text-muted-foreground hover:text-primary transition-colors">Mentorship</Link></li>
+                            <li><Link href="/#pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link></li>
+                            <li><Link href="/sso" className="text-muted-foreground hover:text-primary transition-colors">For Enterprise</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="font-bold mb-4">Company</h4>
                         <ul className="space-y-2">
-                            <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</Link></li>
-                            <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
-                            <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
+                            <li><Link href="/" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
+                            <li><a href="mailto:careers@edunova.com" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
+                            <li><Link href="/" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
+                            <li><Link href="/support" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -44,15 +44,30 @@ export function Footer() {
                         © 2024 EduNova Inc. All rights reserved.
                     </p>
                     <div className="flex gap-4">
-                        <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                        <a
+                            href="https://twitter.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors"
+                        >
                             <Twitter className="w-5 h-5" />
-                        </Link>
-                        <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                        </a>
+                        <a
+                            href="https://github.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors"
+                        >
                             <Github className="w-5 h-5" />
-                        </Link>
-                        <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                        </a>
+                        <a
+                            href="https://linkedin.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors"
+                        >
                             <Linkedin className="w-5 h-5" />
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
