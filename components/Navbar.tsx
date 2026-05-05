@@ -24,12 +24,12 @@ export function Navbar() {
         <nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
             <div className="container mb mx-auto px-4 md:px-6 h-12 md:h-16 flex items-center justify-between">
                 {/* Logo */}
-                <div className="flex items-center gap-2">
+                <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                         <span className="text-white font-bold">E</span>
                     </div>
                     <span className="text-xl font-bold tracking-tight">EduNova</span>
-                </div>
+                </Link>
 
                 {/* Desktop Nav Links */}
                 <div className="hidden md:flex items-center gap-6">
@@ -81,10 +81,11 @@ export function Navbar() {
 
                     <SignedOut>
                         <Link
-                            href="/support"
-                            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                            href="/analytics"
+                            className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-violet-400 transition-colors"
                         >
-                            Mentors
+                            <BarChart3 className="w-3.5 h-3.5" />
+                            Analytics
                         </Link>
                         <Link
                             href="/#pricing"
@@ -184,11 +185,12 @@ export function Navbar() {
 
                         <SignedOut>
                             <Link
-                                href="/support"
+                                href="/analytics"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="flex items-center px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-primary hover:bg-white/5 transition-colors"
+                                className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-violet-400 hover:bg-white/5 transition-colors"
                             >
-                                Mentors
+                                <BarChart3 className="w-4 h-4" />
+                                Analytics
                             </Link>
                             <Link
                                 href="/#pricing"
